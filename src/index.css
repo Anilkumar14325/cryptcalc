@@ -4,13 +4,13 @@
 
 @layer base {
   :root {
-    --gradient-start: theme('colors.primary.700');
-    --gradient-end: theme('colors.accent.700');
+    --gradient-start: theme('colors.primary.800');
+    --gradient-end: theme('colors.accent.900');
   }
 
   .dark {
-    --gradient-start: theme('colors.primary.950');
-    --gradient-end: theme('colors.accent.950');
+    --gradient-start: theme('colors.gray.900');
+    --gradient-end: theme('colors.primary.950');
   }
 }
 
@@ -34,8 +34,8 @@
   height: 200%;
   background: radial-gradient(
     circle,
-    rgba(255, 192, 203, 0.1) 0%,
-    rgba(255, 182, 193, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 25%,
     transparent 50%
   );
   animation: rotate 30s linear infinite;
@@ -65,11 +65,11 @@
 
 .glass-effect {
   backdrop-filter: blur(8px);
-  background: rgba(255, 192, 203, 0.1);
-  border: 1px solid rgba(255, 192, 203, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .dark .glass-effect {
-  background: rgba(139, 0, 0, 0.2);
-  border-color: rgba(255, 192, 203, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.1);
 }
