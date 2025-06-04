@@ -8,12 +8,14 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      <Header />
-      <main className="flex-grow container mx-auto px-4 py-8">
-        {children}
-      </main>
-      <Footer />
+    <div className="flex flex-col min-h-screen animated-gradient">
+      <div className="animated-bg">
+        <Header />
+        <main className="flex-grow container mx-auto px-4 py-8 relative z-10">
+          {children}
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 };
