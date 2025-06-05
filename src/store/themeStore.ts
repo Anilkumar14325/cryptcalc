@@ -14,6 +14,15 @@ export const useThemeStore = create<ThemeState>()(
     }),
     {
       name: 'theme-storage',
+      // Add custom storage handlers to safely parse JSON
+      deserialize: (str) => {
+        try {
+          return JSON.parse(str);
+        } catch (err) {
+          // If parsing fails, return null to trigger fallback to initial state
+          return null;
+        }
+      }
     }
   )
 );
